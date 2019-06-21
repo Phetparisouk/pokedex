@@ -1,0 +1,18 @@
+ <!--[pokemonTaille]="pokemon.taille"-->
+ <h2>Mes Pokemons</h2>
+      <p>Dernière mise a jour : {{ lastUpdate | async |date: 'yMMMMEEEEd' }}</p>
+      <ul class="list-group">
+        <app-pokemon  *ngFor="let pokemon of pokemons; let i = index"
+                       [pokemonName]="pokemon.name"
+                       [pokemonType]="pokemon.type"
+                       
+                       [pokemonStatus]="pokemon.status"
+                       [index]="i"
+                       [id]="pokemon.id">
+        </app-pokemon>
+      </ul>
+      
+<button class="btn btn-success"
+              (click)="onCatch()">Tout capturé</button>
+<button class="btn btn-danger"
+              (click)="onNotCatch()">Tout liberé</button>

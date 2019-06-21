@@ -1,0 +1,15 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': pokemonStatus === 'oui',
+                'list-group-item-danger': pokemonStatus === 'non'}">
+  
+  <h4 [ngStyle]="{color: getColor()}">Pokemon : {{ pokemonName }} -- Capturé : {{ getStatus() }}</h4>
+
+  <button class="btn btn-sm btn-success"
+          *ngIf="pokemonStatus === 'non'"
+          (click)="onSwitch()">Capturé</button>
+  <button class="btn btn-sm btn-danger"
+          *ngIf="pokemonStatus === 'oui'"
+          (click)="onSwitch()">Libre</button>
+    <a [routerLink]="[id]">détail</a>
+
+</li>
