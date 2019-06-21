@@ -13,7 +13,7 @@ import { OnePokemonComponent } from './one-pokemon/one-pokemon.component';
 const appRoutes:Routes =[
  {path:'pokemonList', component: PokemonViewComponent},
  {path:'newPokemon', component: NewPokemonComponent},
- {path:'onePokemon/:id', component: OnePokemonComponent},
+ {path:'pokemonList/:id', component: OnePokemonComponent},
  {path:'', component: PokemonViewComponent},
 ]
 
