@@ -1,39 +1,39 @@
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2">
     <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-		<div class="form-group">
-		    <label for="name">
-		      Nom du pokemon*
-		    </label>
-		    <input type="text" id="name" class="form-control" name="name" placeholder="ex: Pikatchu" ngModel required>
-		</div>
-		<div class="form-group">
-		    <label for="taille">
-		      Taille du pokemon*
-		    </label>
-		    <input type="string" id="taille" class="form-control" name="taille" placeholder="ex: 52cm" ngModel required>
-		</div>
-		<div class="form-group">
-		    <label for="commentaire">
-		      Commentaire*
-		    </label>
-		    <input type="text" id="commentaire" class="form-control" name="commentaire"placeholder="ex: Très rare!!" ngModel required>
-		</div>
-		<div class="form-group">
-		    <label for="type">
-		      Type du pokemon*
-		    </label>
-		    <input type="text" id="type" class="form-control" name="type" placeholder="ex: Electricité" ngModel required>
-		</div>
-		<div class="form-group">
-		    <label for="status">
-		      As-tu capturé ce pokémon?*
-		    </label>
-		    <select id="status" class="form-control" name="status" ngModel required>
-		      <option value="oui">Oui</option>
-		      <option value="non">Non</option>
-		    </select>
-		</div>
+      <div class="form-group">
+          <label for="name">
+            Nom du pokemon*
+          </label>
+          <input type="text" id="name" class="form-control" name="name" placeholder="ex: Pikatchu" ngModel required>
+      </div>
+      <div class="form-group">
+          <label for="taille">
+            Taille du pokemon*
+          </label>
+          <input type="string" id="taille" class="form-control" name="taille" placeholder="ex: 52cm" ngModel required>
+      </div>
+      <div class="form-group">
+          <label for="commentaire">
+            Commentaire*
+          </label>
+          <input type="text" id="commentaire" class="form-control" name="commentaire" placeholder="ex: Très rare!!" ngModel required>
+      </div>
+      <div class="form-group">
+          <label for="type">
+            Type du pokemon*
+          </label>
+          <input type="text" id="type" class="form-control" name="type" placeholder="ex: Electricité" ngModel required>
+      </div>
+      <div class="form-group">
+          <label for="status">
+            As-tu capturé ce pokémon?*
+          </label>
+          <select id="status" class="form-control" name="status" ngModel required>
+            <option value="oui">Oui</option>
+            <option value="non">Non</option>
+          </select>
+      </div>
       <button type="submit" [disabled]="f.invalid">Enregistrer</button>
     </form>
   </div>

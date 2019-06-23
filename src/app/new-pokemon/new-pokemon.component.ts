@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../services/pokemon.service';
-import { Routes,Router ,RouterModule} from '@angular/router';
+import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -16,18 +16,13 @@ export class NewPokemonComponent implements OnInit {
   ngOnInit() {
   }
 
-onSubmit(form: NgForm) {
-    const name = form.value['name'];
-    const status = form.value['status'];
-    const type = form.value['type'];
-    const taille = form.value['taille'];
-    const commentaire = form.value['commentaire'];
-    this.pokemonService.addPokemon(name,type,commentaire,status,taille);
+  onSubmit(form: NgForm) {
+    const name = form.value.name;
+    const status = form.value.status;
+    const type = form.value.type;
+    const taille = form.value.taille;
+    const commentaire = form.value.commentaire;
+    this.pokemonService.addPokemon(name, type, commentaire, status, taille);
     this.router.navigate(['/pokemonList']);
-
-   
+  }
 }
-   
-}
-
-
