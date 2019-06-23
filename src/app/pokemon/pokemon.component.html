@@ -1,21 +1,23 @@
+
 <li [ngClass]="{'list-group-item': true,
                 'list-group-item-info': pokemonStatus === 'oui',
                 'list-group-item-danger': pokemonStatus === 'non'}">
-  <img src="{{ image }}" alt="">
-  <h4 style="margin-left: 430px" [ngStyle]="{color: getColor()}">{{ pokemonName }}</h4>
-  <p  style="margin-left: 330px" [ngStyle]="{color: getColor()}" ><u>Taille</u> : {{ pokemonTaille }}</p>
-  <p  style="margin-left: 330px" [ngStyle]="{color: getColor()}" ><u>Type</u> : {{ pokemonType }}</p>
-  <p  style="margin-left: 330px" [ngStyle]="{color: getColor()}" ><u>Commentaire</u> : {{ pokemonCommentaire }}</p>
+  
+  
+   <h4 style="margin-left: 430px" [ngStyle]="{color: getColor()}">{{ pokemonName }}</h4>  
+   <p  style="margin-left: 330px" [ngStyle]="{color: getColor()}" ><u>Taille</u> : {{ pokemonTaille }}</p>
+   <p  style="margin-left: 330px" [ngStyle]="{color: getColor()}" ><u>Type</u> : {{ pokemonType }}</p>
+   <p  style="margin-left: 330px" [ngStyle]="{color: getColor()}" ><u>Commentaire</u> : {{ pokemonCommentaire }}</p>
 
-  <button [routerLink]="[id]">Voir</button>
-  <button [routerLink]="['update/', id]">Modifier</button>
-  <button (click)="deletePokemonser(id) " style="float: right;">Supprimer</button>
+   <button [routerLink]="[id]">Voir</button>
+   <button [routerLink]="['update/', id]">Modifier</button>    
+   <button (click)="deletePokemonser(id)"style="float: right;">Supprimer</button>
 
   <button
   style="float: right;"
           *ngIf="pokemonStatus === 'non'"
-          (click)="onSwitch()">Je l'ai eu !!!
-  </button>
+          (click)="onSwitch()">Je l'ai eu !!!</button>
+
 
   <button
   style="float: right;"
