@@ -4,27 +4,27 @@ export class PokemonService {
 
 pokemons=[
   {
-    id:1,
+    id:0,
   	name : 'Pikachu',
-  	type: 'feu',
-    taille:'50',
-    commentaire: 'Cadeau',
+  	type: 'électivité',
+    taille:'50cm',
+    commentaire: 'Acheté chez leboncoin.fr',
     status:'oui'
   },
   {	
-    id:2,
+    id:1,
     name : 'Carapuce',
     type: 'eau',
-    taille:'30',
-    commentaire: 'Cadeau',
+    taille:'30cm',
+    commentaire: 'Offert avec le menu Maxi Best Of',
     status:'oui'
   },
   {
-    id:3,
+    id:2,
     name : 'Salameche',
     type: 'feu',
-    taille:'40',
-    commentaire: 'faiblesse: eau',
+    taille:'40cm',
+    commentaire: 'Relache son potentiel lors des camping',
     status:'non'
   }
   ];
@@ -56,17 +56,18 @@ switchNotCatchOne(i: number) {
     this.pokemons[i].status = 'non';
 }
 
+deletePokemon(i: number) {
+    this.pokemons.splice(i,1);
+}
+
 addPokemon(name: string, type:string,commentaire:string,status: string,taille:string) {
     const pokemonObject = {
-      id: 0,
+      id: 999,
       name: '',
       type:'',
       taille:'',
       commentaire:'',
-      status: ''
-      
-      
-      //taille:0
+      status: ''  
     };
     pokemonObject.name = name;
     pokemonObject.type = type;
@@ -75,8 +76,13 @@ addPokemon(name: string, type:string,commentaire:string,status: string,taille:st
     pokemonObject.taille = taille;
     pokemonObject.id = this.pokemons[(this.pokemons.length - 1)].id + 1;
     this.pokemons.push(pokemonObject);
-
-
+}
+updatePokemon(id:number,newName: string, newType:string,newCommentaire:string,newStatus: string,newTaille:string) {
+  this.pokemons[id].name=newName;
+  this.pokemons[id].type=newType;
+  this.pokemons[id].commentaire=newCommentaire;
+  this.pokemons[id].status=newStatus;
+  this.pokemons[id].taille=newTaille;
 
 }
 

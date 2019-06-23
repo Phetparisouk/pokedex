@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../services/pokemon.service';
 import { Routes,Router ,RouterModule} from '@angular/router';
-
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -26,7 +25,7 @@ onSubmit(form: NgForm) {
     this.pokemonService.addPokemon(name,type,commentaire,status,taille);
     this.router.navigate(['/pokemonList']);
 
-    //console.log(form.value);
+   
 }
    
 }

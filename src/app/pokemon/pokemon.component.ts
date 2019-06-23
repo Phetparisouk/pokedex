@@ -23,12 +23,14 @@ export class PokemonComponent implements OnInit {
   getStatus(){
 	return this.pokemonStatus;
   }
-
+ deletePokemonser() {
+     this.pokemonService.deletePokemon(this.index);
+  }
   getColor() {
     if(this.pokemonStatus === 'oui') {
       return 'green';
     } else if(this.pokemonStatus === 'non') {
-      return 'red';
+      return 'purple';
     }
   }
   onSwitch() {
@@ -37,6 +39,6 @@ export class PokemonComponent implements OnInit {
     } else if(this.pokemonStatus === 'non') {
       this.pokemonService.switchCatchOne(this.index);
     }
-  }
-  
+  }  
+
 }

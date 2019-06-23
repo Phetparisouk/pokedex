@@ -1,18 +1,35 @@
  <!--[pokemonTaille]="pokemon.taille"-->
+
+ <body>
  <h2>Mes Pokemons</h2>
-      <p>Dernière mise a jour : {{ lastUpdate | async |date: 'yMMMMEEEEd' }}</p>
+      <p>Dernière mise a jour : {{ lastUpdate | async |date: 'short' }}</p>
       <ul class="list-group">
         <app-pokemon  *ngFor="let pokemon of pokemons; let i = index"
                        [pokemonName]="pokemon.name"
                        [pokemonType]="pokemon.type"
-                       
+                       [pokemonTaille]="pokemon.taille"
                        [pokemonStatus]="pokemon.status"
+                       [pokemonCommentaire]="pokemon.commentaire"
                        [index]="i"
                        [id]="pokemon.id">
         </app-pokemon>
+
       </ul>
-      
+      <!--
 <button class="btn btn-success"
               (click)="onCatch()">Tout capturé</button>
 <button class="btn btn-danger"
               (click)="onNotCatch()">Tout liberé</button>
+-->
+
+<img src="assets/img/close-pokeball.png" height="95" width="95"
+     alt="Capturer" 
+     class="centercl"
+     (click)="onCatch()"/>
+
+<img src="assets/img/open-pokeball.png" height="80" width="80" margin-left="10px"
+     alt="Liberer" 
+     class="centerop"
+     (click)="onNotCatch()"
+     style="float: right;"/>
+</body>

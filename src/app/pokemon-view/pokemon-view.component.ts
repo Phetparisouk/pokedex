@@ -10,14 +10,14 @@ import { PokemonService } from '../services/pokemon.service';
 export class PokemonViewComponent implements OnInit {
   pokemons: any[];
 
-  /*lastUpdate = new Promise((resolve, reject) => {
+  lastUpdate = new Promise((resolve, reject) => {
     const date = new Date();
     setTimeout(
       () => {
         resolve(date);
       }, 2000
     );
-  });*/
+  });
 
   constructor(private pokemonService: PokemonService) { }
 

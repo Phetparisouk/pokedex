@@ -5,31 +5,31 @@
 		    <label for="name">
 		      Nom du pokemon*
 		    </label>
-		    <input type="text" id="name" class="form-control" name="name" placeholder="ex: Pikatchu" ngModel required>
+		    <input type="text" id="name" class="form-control" name="name" [(ngModel)]="name" ngModel required>
 		</div>
 		<div class="form-group">
 		    <label for="taille">
 		      Taille du pokemon*
 		    </label>
-		    <input type="string" id="taille" class="form-control" name="taille" placeholder="ex: 52cm" ngModel required>
+		    <input type="string" id="taille" class="form-control" name="taille"[(ngModel)]="taille" ngModel required>
 		</div>
 		<div class="form-group">
 		    <label for="commentaire">
 		      Commentaire*
 		    </label>
-		    <input type="text" id="commentaire" class="form-control" name="commentaire"placeholder="ex: Très rare!!" ngModel required>
+		    <input type="text" id="commentaire" class="form-control" name="commentaire" [(ngModel)]="commentaire"ngModel required>
 		</div>
 		<div class="form-group">
 		    <label for="type">
 		      Type du pokemon*
 		    </label>
-		    <input type="text" id="type" class="form-control" name="type" placeholder="ex: Electricité" ngModel required>
+		    <input type="text" id="type" class="form-control" name="type" [(ngModel)]="type" ngModel required>
 		</div>
 		<div class="form-group">
 		    <label for="status">
 		      As-tu capturé ce pokémon?*
 		    </label>
-		    <select id="status" class="form-control" name="status" ngModel required>
+		    <select id="status" class="form-control" name="status" [(ngModel)]="status" ngModel required>
 		      <option value="oui">Oui</option>
 		      <option value="non">Non</option>
 		    </select>
